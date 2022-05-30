@@ -16,17 +16,23 @@ while g1.game_over == false
     #print wrong answer message
     g1.print_wrong_answer(curr_player)
     #subtract 1 from the current player's life - if 0 lives left, game over!
-    if (g1.players[curr_player].subtract_life == 0)
-      g1.set_winner((curr_player + 1) % 2)         
-    end    
+    g1.players[curr_player].subtract_life
   else  
     #print right answer message
     g1.print_right_answer(curr_player)
   end  
   g1.print_stats
+  #if the current player has run out of lives, set the winner and Game Over!
+  if (g1.players[curr_player].lives == 0)
+    g1.set_winner((curr_player + 1) % 2)  
+  end    
+
   #switch to the next player
   curr_player = (curr_player + 1) % 2
+
+
 end  
+puts "Good bye!"
 
 
 

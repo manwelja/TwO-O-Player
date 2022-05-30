@@ -18,6 +18,7 @@ class Game
   end 
   
   def present_question(player_num)
+    #Generate a random math question and present it to the user
     num1 = rand(1..10)
     num2 = rand(1..10)
     answer = num1 + num2
@@ -45,8 +46,9 @@ class Game
   end  
 
   def set_winner(player_num)
+    puts "\n#{GAME_OVER}"
     @winner = @players[player_num]
     @game_over = true
-    puts "#{@winner.name} #{WINNER_MESSAGE}"
+    puts "#{@winner.name} #{WINNER_MESSAGE} #{@winner.lives}/3"
   end   
 end
