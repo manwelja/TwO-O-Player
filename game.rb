@@ -45,7 +45,7 @@ class Game
     puts "#{@player1.name}: #{@player1.lives}/3 vs #{@player2.name}: #{@player2.lives}/3" 
   end  
 
-  def set_winner(player_num)
+  def set_and_print_winner(player_num)
     puts "\n#{GAME_OVER}"
     @winner = @players[player_num]
     @game_over = true

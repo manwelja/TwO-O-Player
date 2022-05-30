@@ -24,7 +24,7 @@ while g1.game_over == false
   g1.print_stats
   #if the current player has run out of lives, set the winner and Game Over!
   if (g1.players[curr_player].lives == 0)
-    g1.set_winner((curr_player + 1) % 2)  
+    g1.set_and_print_winner((curr_player + 1) % 2)  
   end    
 
   #switch to the next player
